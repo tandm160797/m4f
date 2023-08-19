@@ -1,0 +1,10 @@
+{
+	"extends": "tsconfig/nest.json",
+	"compilerOptions": {
+		"rootDir": ".",
+		"outDir": "dist",
+		"baseUrl": "src"
+	},
+	"include": ["src", ".eslintrc.js"],
+	"exclude": ["node_modules"]
+}

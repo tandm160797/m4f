@@ -1,0 +1,47 @@
+{
+  "name": "@m4f/turbo",
+  "author": {
+    "name": "tandm",
+    "email": "tandm160797@gmail.com"
+  },
+  "private": true,
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@turbo/gen": "^1.9.7",
+    "@types/node": "^20.5.1",
+    "eslint-config-react": "workspace:^",
+    "eslint-config-standard-typescript": "workspace:^",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "standard-prettier": "workspace:^",
+    "tsconfig": "workspace:^",
+    "turbo": "latest",
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo lint",
+    "pretty": "turbo pretty",
+    "prepare": "husky install",
+    "lint-staged": "turbo lint && turbo pretty"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,md,json}": [
+      "lint-staged"
+    ]
+  },
+  "engines": {
+    "node": ">= v16.19.0",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "pnpm": ">= 8.6.10"
+  },
+  "packageManager": "pnpm@8.6.10"
+}

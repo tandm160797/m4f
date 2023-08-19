@@ -1,0 +1,26 @@
+{
+	"extends": "tsconfig/next.json",
+	"compilerOptions": {
+		"rootDir": ".",
+		"outDir": "dist",
+
+		"baseUrl": "src",
+		"paths": {
+			"@components": ["components"],
+			"@components/*": ["components/*"],
+
+			"@styles": ["styles"],
+			"@styles/*": ["styles/*"]
+		}
+	},
+	"include": [
+		"src",
+		"next-env.d.ts",
+		".eslintrc.js",
+		"next.config.js",
+		"postcss.config.js",
+		"tailwind.config.ts",
+		".next/types/**/*.ts"
+	],
+	"exclude": ["node_modules"]
+}
